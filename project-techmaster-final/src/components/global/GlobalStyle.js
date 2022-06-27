@@ -44,9 +44,17 @@ export const GlobalStyles = createGlobalStyle`
       overflow-wrap: break-word;
     }
     body{
-        transition: all 0.5s linear;
-        font-family: 'Inter';
+    transition: all 0.5s linear;
+    font-family: 'Inter';
 		font-style: normal;
 		font-weight: 400;
+    background: ${({ theme }) => theme.bg1};
+    color: ${({ theme }) => theme.text};
+    }
+    li{
+      list-style: none;
+    }
+    a{
+      text-decoration: none;
     }
 `;
