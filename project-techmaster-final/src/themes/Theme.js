@@ -7,6 +7,8 @@ export const darkTheme = {
     textnote : '#848E9C',
     textdesc: '#B7BDC6',
     textpri : 'rgb(240, 185, 11)',
+    textblack : '#121214',
+    bgmode : '#303030'
 };
 
 export const lightTheme = {
@@ -18,4 +20,6 @@ export const lightTheme = {
     textnote : '#707A8A',
     textdesc: 'rgb(71, 77, 87)',
     textpri : 'rgb(201, 148, 0)',
+    textblack : '#121214',
+    bgmode : '#D6D6D4'
 }

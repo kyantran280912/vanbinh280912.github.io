@@ -5,15 +5,16 @@ import BtnHeader from "./BtnHeader";
 import LogoHeader from "./LogoHeader";
 import Navbar from "./Navbar";
 
-const Header = () => {
+const Header = (props) => {
   return (
     <StyledHeader>
+
       <div className="left">
         <LogoHeader></LogoHeader>
         <Navbar></Navbar>
         <div className="box-search"><Input placeholder='Tìm Coin'></Input></div>
       </div>
-      <BtnHeader/>
+      <BtnHeader themeToggler={props.themeToggler} />
     </StyledHeader>
   );
 };
