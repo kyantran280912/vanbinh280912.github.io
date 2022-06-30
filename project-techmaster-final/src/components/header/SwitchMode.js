@@ -1,7 +1,5 @@
 import React from 'react'
 import styled from "styled-components";
-import useDarkMode from "../../hook/useDarkMode";
-
 const SwitchMode = ({ themeToggler }) => {
 
     return (
@@ -19,6 +17,7 @@ const BoxSwitch = styled.label`
         border-radius: 20px;
         display: flex;
         align-items: center;
+        cursor: pointer;
         input{
             display: none;
         }

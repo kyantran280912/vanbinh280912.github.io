@@ -1,14 +1,18 @@
 import { Icon } from "@iconify/react";
 import React from "react";
 import styled from "styled-components";
+import DropdownApp from "./DropdownApp";
 
 const Navbar = () => {
   return (
     <StyledNav>
       <ul className="menu">
-        <li className="menu-items">
+        <li className="menu-items" style={{height: 64}} >
           <Icon icon="fluent:app-folder-20-filled" className="app-icon"></Icon>
           <Icon icon="ant-design:caret-down-filled"></Icon>
+          <div className="box-dropdown">
+          <DropdownApp/>
+          </div>
         </li>
         <li className="menu-items">
           Mua Crypto
@@ -44,6 +48,7 @@ const StyledNav = styled.div`
   .menu {
     display: flex;
     align-items: center;
+    height: 100%;
     .menu-items {
       cursor: pointer;
       display: flex;
@@ -52,14 +57,31 @@ const StyledNav = styled.div`
       font-size: 14px;
       line-height: 64px;
       gap: 0 4px;
+      position: relative;
       svg {
         color: ${({ theme }) => theme.text};
         font-size: 12px;
+        transition: .2s ;
       }
       .app-icon{
         font-size: 26px;
       }
+      :hover{
+        color: ${({ theme }) => theme.pri};
+        svg{
+          color: ${({ theme }) => theme.pri};
+          transform: rotate(180deg);
+        }
+        .app-icon{
+          transform: rotate(0);
+        }
+      }
+      .box-dropdown{
+        position: absolute;
+        top: 100%;
+      }
     }
+    
   }
 `;
 
