@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Input from "../input/Input";
+import Input from "../input/InputSearch";
 import BtnHeader from "./BtnHeader";
 import LogoHeader from "./LogoHeader";
 import Navbar from "./Navbar";
@@ -12,7 +12,7 @@ const Header = (props) => {
       <div className="left">
         <LogoHeader></LogoHeader>
         <Navbar></Navbar>
-        <div className="box-search"><Input placeholder='Tìm Coin'></Input></div>
+        <div className="box-search" style={{ display: 'none'}}><Input placeholder='Tìm Coin'></Input></div>
       </div>
       <BtnHeader themeToggler={props.themeToggler} />
     </StyledHeader>

@@ -7,8 +7,10 @@ import SwitchMode from './SwitchMode';
 const BtnHeader = (props) => {
   return (
     <BoxBtn>
-      <Button textbutton='Đăng nhập' btnsignin={true} />
+      <div className="button"><Button textbutton='Đăng nhập' btnsignin={true} /></div>
+      <div className="button">
       <Button textbutton='Đăng kí' />
+      </div>
       <QrCode>
         <Icon icon='ant-design:download-outlined'></Icon>
       </QrCode>
@@ -18,7 +20,7 @@ const BtnHeader = (props) => {
 }
 const BoxBtn = styled.div`
   display: flex;
-  gap: 0 14px;
+  gap: 0 5px;
   height: 100%;
   display: flex;
   align-items: center;

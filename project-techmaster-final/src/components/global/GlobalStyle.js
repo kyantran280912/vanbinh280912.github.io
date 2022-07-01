@@ -48,7 +48,7 @@ export const GlobalStyles = createGlobalStyle`
     font-family: 'Inter';
 		font-style: normal;
 		font-weight: 400;
-    background: ${({ theme }) => theme.bg1};
+    background: ${({ theme }) => theme.bg};
     color: ${({ theme }) => theme.text};
     }
     li{
@@ -61,5 +61,10 @@ export const GlobalStyles = createGlobalStyle`
       cursor: pointer;
       outline: none;
       border: none;
+    }
+    h2{
+    line-height: 48px;
+    font-size: 40px;
+    color: ${({ theme }) => theme.text};
     }
 `;

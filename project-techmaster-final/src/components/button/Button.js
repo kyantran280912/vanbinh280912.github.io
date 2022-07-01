@@ -2,9 +2,10 @@ import React from "react";
 import styled, { css } from "styled-components";
 
 const Button = (props) => {
-  return <ButtonPri btnsignin={props.btnsignin}>{props.textbutton}</ButtonPri>;
+  return <ButtonPri btnsignin={props.btnsignin}>{props.textbutton || props.children}</ButtonPri>;
 };
 const ButtonPri = styled.button`
+  width: 100%;
   border-radius: 4px;
   padding: 0 20px;
   line-height: 32px;

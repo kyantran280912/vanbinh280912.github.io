@@ -1,6 +1,7 @@
 export const darkTheme = {
     bg : '#181A20',
     bg1: '#0B0E11',
+    bg2: '#1E2329',
     bginput: '#292A30',
     pri : 'rgb(252, 213, 53)',
     text : "#EAECEF",
@@ -14,6 +15,7 @@ export const darkTheme = {
 export const lightTheme = {
     bg : '#FFFFFF',
     bg1: 'rgb(250, 250, 250)',
+    bg2: '#FFFFFF',
     pri : 'rgb(252, 213, 53)',
     bginput: '#FFFFFF',
     text : "#1F2128",

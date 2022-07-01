@@ -6,6 +6,7 @@ import useDarkMode from "./hook/useDarkMode";
 import { darkTheme, lightTheme } from "./themes/Theme";
 import styled from "styled-components";
 import Header from "./components/header/Header";
+import Home from "./pages/home/Home";
 
 function App() {
 	const [theme, themeToggler] = useDarkMode();
@@ -13,7 +14,7 @@ function App() {
 		{
 			path: "/",
 			exact: true,
-			//   main: <Header />,
+			  main: <Home />,
 		},
 	];
 	return (
@@ -45,6 +46,6 @@ function App() {
 }
 const Container = styled.div``;
 const Wrapper = styled.div`
-  width: 100vw;
+  width: 100%;
 `;
 export default App;
