@@ -2,7 +2,22 @@ import React from 'react'
 import styled from "styled-components";
 import ButtonSeeMore from '../../components/button/ButtonSeeMore';
 import { Icon } from '@iconify/react';
+import NavListActive from '../../components/navactive/NavListActive';
+import Slider from '../../components/slider/Slider';
+import img1 from '../../assets/image/sliderhome1.png'
+import img2 from '../../assets/image/sliderhome2.png'
+import img3 from '../../assets/image/sliderhome3.png'
+import img4 from '../../assets/image/sliderhome4.png'
+import img5 from '../../assets/image/sliderhome5.png'
+import img6 from '../../assets/image/sliderhome6.png'
+import img7 from '../../assets/image/sliderhome7.png'
+import img8 from '../../assets/image/sliderhome8.png'
+import img9 from '../../assets/image/sliderhome9.png'
+
+
 const ListCoinTop = () => {
+   
+    
     return (
         <SectionListCoin>
             <div className="container">
@@ -10,13 +25,8 @@ const ListCoinTop = () => {
                     <h2>Nắm Bắt Cơ Hội Giao Dịch</h2>
                 </div>
                 <div className="btn-section">
-                    <ul>
-                        <li className='active'>Top đầu</li>
-                        <li>Listing mới</li>
-                        <li>Hot Coin</li>
-                        <li>Hot Phái sinh</li>
-                    </ul>
-                    <ButtonSeeMore>Xem thêm</ButtonSeeMore>
+                  <NavListActive  navlistactive={datanavlistactive}/>
+                    <ButtonSeeMore >Xem thêm</ButtonSeeMore>
                 </div>
                 <ListCoin>
                     <div className="coin-item">
@@ -55,10 +65,63 @@ const ListCoinTop = () => {
                         <ButtonSeeMore>Xem chi tiết</ButtonSeeMore>
                     </div>
                 </ListCoin>
+                <Slider datasilder={datasilder}/>
+                
             </div>
         </SectionListCoin>
     )
 }
+const datasilder = [
+    {
+        img: img1,
+        title: 'OBX/USDT Hiện đã sẵn sàng',
+        note: 'Giao dịch để chia sẻ tổng thưởng 2.500.000 OBX! Từ 19:00 ngày 30/6/2022 đến 19:00 ngày 6/7/2022.'
+    },
+    {
+        img: img2,
+        title: 'OBX/USDT Hiện đã sẵn sàng',
+        note: 'Giao dịch để chia sẻ tổng thưởng 2.500.000 OBX! Từ 19:00 ngày 30/6/2022 đến 19:00 ngày 6/7/2022.'
+    },
+    {
+        img: img3,
+        title: 'OBX/USDT Hiện đã sẵn sàng',
+        note: 'Giao dịch để chia sẻ tổng thưởng 2.500.000 OBX! Từ 19:00 ngày 30/6/2022 đến 19:00 ngày 6/7/2022.'
+    },
+    {
+        img: img4,
+        title: 'OBX/USDT Hiện đã sẵn sàng',
+        note: 'Giao dịch để chia sẻ tổng thưởng 2.500.000 OBX! Từ 19:00 ngày 30/6/2022 đến 19:00 ngày 6/7/2022.'
+    },
+    {
+        img: img5,
+        title: 'OBX/USDT Hiện đã sẵn sàng',
+        note: 'Giao dịch để chia sẻ tổng thưởng 2.500.000 OBX! Từ 19:00 ngày 30/6/2022 đến 19:00 ngày 6/7/2022.'
+    },
+    {
+        img: img6,
+        title: 'OBX/USDT Hiện đã sẵn sàng',
+        note: 'Giao dịch để chia sẻ tổng thưởng 2.500.000 OBX! Từ 19:00 ngày 30/6/2022 đến 19:00 ngày 6/7/2022.'
+    },
+    {
+        img: img7,
+        title: 'OBX/USDT Hiện đã sẵn sàng',
+        note: 'Giao dịch để chia sẻ tổng thưởng 2.500.000 OBX! Từ 19:00 ngày 30/6/2022 đến 19:00 ngày 6/7/2022.'
+    },
+    {
+        img: img8,
+        title: 'OBX/USDT Hiện đã sẵn sàng',
+        note: 'Giao dịch để chia sẻ tổng thưởng 2.500.000 OBX! Từ 19:00 ngày 30/6/2022 đến 19:00 ngày 6/7/2022.'
+    },
+    {
+        img: img9,
+        title: 'OBX/USDT Hiện đã sẵn sàng',
+        note: 'Giao dịch để chia sẻ tổng thưởng 2.500.000 OBX! Từ 19:00 ngày 30/6/2022 đến 19:00 ngày 6/7/2022.'
+    },
+   
+]
+const datanavlistactive = [
+    'Top đầu' , 'Listing mới' , 'Hot Coin', 'Hot Phái sinh'
+]
 const SectionListCoin = styled.section`
     width: 100%;
     .container{
@@ -78,45 +141,21 @@ const SectionListCoin = styled.section`
         justify-content: space-between;
         align-items: center;
     }
-    ul{
-        display: flex;
-        align-items: center;
-        gap: 0 64px;
-        li{
-            font-size: 20px;
-            font-weight: 600;
-            line-height: 28px;
-            padding: 4px 0;
-            color: ${({ theme }) => theme.textnote};
-            :hover{
-                color: ${({ theme }) => theme.pri};
-            }
-        }
-        li.active{
-            color: ${({ theme }) => theme.pri};
-            position: relative;
-            ::before{
-                content:'';
-                position: absolute;
-                top: 100%;
-                width: 100%;
-                height: 1px;
-                background: ${({ theme }) => theme.pri};
-            }
-        }
-    }
+   
+        
+    
     @media screen and (max-width: 1440px) {
         .container{
             max-width: 1200px;
         }
     }
-    
 `
 const ListCoin = styled.div`
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 0 24px;
     margin-top: 40px;
+    margin-bottom: 40px;
     .coin-item{
         background: ${({ theme }) => theme.bg1};
         border-radius: 16px;

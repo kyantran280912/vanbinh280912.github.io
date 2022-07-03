@@ -67,4 +67,24 @@ export const GlobalStyles = createGlobalStyle`
     font-size: 40px;
     color: ${({ theme }) => theme.text};
     }
+  ::-webkit-scrollbar {
+  width: 12px;
+  height: 8px;
+  background-color: ${({ theme }) => theme.bg1};
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 2px;
+  
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: ${({ theme }) => theme.bg2};
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: 121317;
+}
 `;

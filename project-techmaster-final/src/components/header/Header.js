@@ -19,6 +19,7 @@ const Header = (props) => {
   );
 };
 const StyledHeader = styled.div`
+  position: fixed;
   background: ${({ theme }) => theme.bg};
   height: 64px;
   width: 100%;
