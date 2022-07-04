@@ -69,6 +69,7 @@ const StyledNav = styled.div`
       }
       .box-dropdown{
         display: none;
+       
       }
       :hover{
         color: ${({ theme }) => theme.pri};
@@ -86,6 +87,7 @@ const StyledNav = styled.div`
       .box-dropdown{
         position: absolute;
         top: 100%;
+        z-index: 9999;
       }
     }
     

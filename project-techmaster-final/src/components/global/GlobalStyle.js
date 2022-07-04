@@ -62,11 +62,7 @@ export const GlobalStyles = createGlobalStyle`
       outline: none;
       border: none;
     }
-    h2{
-    line-height: 48px;
-    font-size: 40px;
-    color: ${({ theme }) => theme.text};
-    }
+
   ::-webkit-scrollbar {
   width: 12px;
   height: 8px;

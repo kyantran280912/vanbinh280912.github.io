@@ -23,6 +23,7 @@ const Ul = styled.ul`
   display: flex;
   align-items: center;
   gap: 0 64px;
+  
 `;
 const Li = styled.li`
   font-size: 20px;

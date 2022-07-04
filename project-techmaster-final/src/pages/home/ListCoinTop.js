@@ -13,6 +13,7 @@ import img6 from '../../assets/image/sliderhome6.png'
 import img7 from '../../assets/image/sliderhome7.png'
 import img8 from '../../assets/image/sliderhome8.png'
 import img9 from '../../assets/image/sliderhome9.png'
+import TitleSection from '../../components/title/TitleSection';
 
 
 const ListCoinTop = () => {
@@ -22,7 +23,9 @@ const ListCoinTop = () => {
         <SectionListCoin>
             <div className="container">
                 <div className="title">
-                    <h2>Nắm Bắt Cơ Hội Giao Dịch</h2>
+                    <TitleSection>
+                    Nắm Bắt Cơ Hội Giao Dịch
+                    </TitleSection>
                 </div>
                 <div className="btn-section">
                   <NavListActive  navlistactive={datanavlistactive}/>
@@ -124,6 +127,7 @@ const datanavlistactive = [
 ]
 const SectionListCoin = styled.section`
     width: 100%;
+    margin-bottom: 100px;
     .container{
         max-width: 1440px;
         margin: 0 auto;
@@ -140,6 +144,7 @@ const SectionListCoin = styled.section`
         display:flex;
         justify-content: space-between;
         align-items: center;
+        z-index: 10;
     }
    
         
@@ -155,12 +160,13 @@ const ListCoin = styled.div`
     grid-template-columns: repeat(5, 1fr);
     gap: 0 24px;
     margin-top: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
     .coin-item{
         background: ${({ theme }) => theme.bg1};
         border-radius: 16px;
         padding: 40px 24px;
         text-align: center;
+        cursor: pointer;
         .coin{
             color: ${({ theme }) => theme.pri};
             font-size: 40px;
@@ -189,6 +195,9 @@ const ListCoin = styled.div`
         button{
             margin: 0 auto;
             margin-top: 40px;
+        }
+        :hover{
+            box-shadow: 0px 2px 32px rgba(24,32,82,0.2)
         }
     }
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from "styled-components";
 import BannerHome from './BannerHome';
+import FeatureHome from './FeatureHome';
 import ListCoinTop from './ListCoinTop';
 
 
@@ -10,6 +11,7 @@ const Home = () => {
     <Main>
       <BannerHome></BannerHome>
       <ListCoinTop/>
+      <FeatureHome/>
     </Main>
   )
 }

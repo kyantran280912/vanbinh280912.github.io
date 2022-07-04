@@ -27,6 +27,7 @@ const StyledHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 9999;
   .left {
     display: flex;
     align-items: center;

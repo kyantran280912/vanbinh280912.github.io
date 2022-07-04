@@ -116,6 +116,7 @@ const BoxDropdown = styled.div`
     background: ${({ theme }) => theme.bg2};
     height: 442px;
     width: 800px;
+    z-index: 100;
     .left{
       width: 80%;
       display: inline-flex;

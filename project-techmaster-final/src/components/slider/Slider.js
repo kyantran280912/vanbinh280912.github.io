@@ -131,7 +131,18 @@ const ListSlider = styled.div`
             bottom: 0;
             left: 0;
             right: 0;
-           
+            text-align: left;
+           .title{
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 28px;
+            color: ${({ theme }) => theme.text};
+           }
+           .note{
+            font-size: 14px;
+            line-height: 22px;
+            color: ${({ theme }) => theme.textnote};
+           }
         }
         :hover{
             img{
