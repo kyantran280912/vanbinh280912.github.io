@@ -7,7 +7,7 @@ import Feature3 from '../../assets/image/feature3.jpg'
 import Feature4 from '../../assets/image/feature4.jpg'
 import Feature5 from '../../assets/image/feature5.jpg'
 import Feature6 from '../../assets/image/feature6.jpg'
-
+import ButtonSeeMore from '../.././components/button/ButtonSeeMore'
 
 const FeatureHome = () => {
   return (
@@ -20,12 +20,14 @@ const FeatureHome = () => {
       <ListFeature>
         <div className="feature-item">
 			<div className="left">
+				<div className="left-top">
 				<div className="title-feature">
 				Giao Ngay
 				</div>
 				<div className="note-feature">Mua và bán các crypto hot trên Giao Ngay với mức phí thấp.</div>
-				<div className="icon-feature">
-
+				</div>
+				<div className="icon-feature"><ButtonSeeMore>Xem chi tiết</ButtonSeeMore>
+				
 				</div>
 			</div>
 			<div className="right">
@@ -34,12 +36,14 @@ const FeatureHome = () => {
 		</div>
 		<div className="feature-item">
 			<div className="left">
+				<div className="left-top">
 				<div className="title-feature">
 				Phái Sinh
 				</div>
 				<div className="note-feature">Nâng tầm giao dịch USDT Vĩnh Viễn, Tương Lai Nghịch Đảo...</div>
+				</div>
 				<div className="icon-feature">
-
+				<ButtonSeeMore>Xem chi tiết</ButtonSeeMore>
 				</div>
 			</div>
 			<div className="right">
@@ -48,12 +52,14 @@ const FeatureHome = () => {
 		</div>
 		<div className="feature-item">
 			<div className="left">
+				<div className="left-top">
 				<div className="title-feature">
 				Thị Trường NFT
 				</div>
 				<div className="note-feature">Đa dạng với Hợp đồng Quyền Chọn được ký quỹ bằng stablecoin.</div>
+				</div>
 				<div className="icon-feature">
-
+				<ButtonSeeMore>Xem chi tiết</ButtonSeeMore>
 				</div>
 			</div>
 			<div className="right">
@@ -62,12 +68,14 @@ const FeatureHome = () => {
 		</div>
 		<div className="feature-item">
 			<div className="left">
+				<div className="left-top">
 				<div className="title-feature">
 				Bybit Earn
 				</div>
 				<div className="note-feature">Nhận lợi nhuận cao với các sản phẩm staking đa dạng.</div>
+				</div>
 				<div className="icon-feature">
-
+				<ButtonSeeMore>Xem chi tiết</ButtonSeeMore>
 				</div>
 			</div>
 			<div className="right">
@@ -76,12 +84,14 @@ const FeatureHome = () => {
 		</div>
 		<div className="feature-item">
 			<div className="left">
+				<div className="left-top">
 				<div className="title-feature">
 				Bybit Earn
 				</div>
 				<div className="note-feature">Nhận lợi nhuận cao với các sản phẩm staking đa dạng.</div>
+				</div>
 				<div className="icon-feature">
-
+				<ButtonSeeMore>Xem chi tiết</ButtonSeeMore>
 				</div>
 			</div>
 			<div className="right">
@@ -90,12 +100,14 @@ const FeatureHome = () => {
 		</div>
 		<div className="feature-item">
 			<div className="left">
+				<div className="left-top">
 				<div className="title-feature">
 				Quyền Chọn
 				</div>
 				<div className="note-feature">Đa dạng với Hợp đồng Quyền Chọn được ký quỹ bằng stablecoin.</div>
+				</div>
 				<div className="icon-feature">
-
+				<ButtonSeeMore>Xem chi tiết</ButtonSeeMore>
 				</div>
 			</div>
 			<div className="right">
@@ -152,8 +164,12 @@ const ListFeature = styled.div`
 	width: 60%;
 	height: 100%;
 	display: flex;
+	justify-content: space-between;	
 	align-items: flex-start;
 	flex-direction: column;
+  }
+  .icon-feature{
+	margin-top: auto;
   }
   .title-feature{
 	color: ${({ theme }) => theme.bg1};

@@ -83,4 +83,10 @@ export const GlobalStyles = createGlobalStyle`
 ::-webkit-scrollbar-thumb:hover {
   background-color: 121317;
 }
+a{
+  color: ${({ theme }) => theme.pri};
+}
+:root{
+  --text-pri: #ffffff;
+}
 `;

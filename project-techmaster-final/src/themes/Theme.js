@@ -9,7 +9,9 @@ export const darkTheme = {
     textdesc: '#B7BDC6',
     textpri : 'rgb(240, 185, 11)',
     textblack : '#121214',
-    bgmode : '#303030'
+    bgmode : '#303030',
+    blue: '#043373',
+
 };
 
 export const lightTheme = {
@@ -23,5 +25,7 @@ export const lightTheme = {
     textdesc: 'rgb(71, 77, 87)',
     textpri : 'rgb(201, 148, 0)',
     textblack : '#121214',
-    bgmode : '#D6D6D4'
+    bgmode : '#D6D6D4',
+    blue: '#043373',
+
 }

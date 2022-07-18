@@ -7,6 +7,9 @@ import { darkTheme, lightTheme } from "./themes/Theme";
 import styled from "styled-components";
 import Header from "./components/header/Header";
 import Home from "./pages/home/Home";
+import Footer from "./components/footer/Footer";
+import SignIn from "./pages/Auth/SignIn";
+import SignUp from "./pages/Auth/SignUp";
 
 function App() {
 	const [theme, themeToggler] = useDarkMode();
@@ -15,6 +18,16 @@ function App() {
 			path: "/",
 			exact: true,
 			  main: <Home />,
+		},
+		{
+			path: "/auth/signin",
+			exact: true,
+			  main: <SignIn />,
+		},
+		{
+			path: "/auth/signup",
+			exact: true,
+			  main: <SignUp />,
 		},
 	];
 	return (
@@ -37,6 +50,7 @@ function App() {
 									);
 								})}
 							</Routes>
+							<Footer/>
 						</Container>
 					</Router>
 				</Wrapper>

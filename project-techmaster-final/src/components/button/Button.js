@@ -6,6 +6,7 @@ const Button = (props) => {
 };
 const ButtonPri = styled.button`
   width: 100%;
+  height: 100%;
   border-radius: 4px;
   padding: 0 20px;
   line-height: 32px;

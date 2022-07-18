@@ -16,6 +16,7 @@ const InputStyle = styled.div`
     background: ${({ theme }) => theme.bginput};
     border-radius: 5px;
     width: 100%;
+    height: 100%;
     padding: 8px 10px;
     border: 1px solid ${({ theme }) => theme.textnote};
     :hover{

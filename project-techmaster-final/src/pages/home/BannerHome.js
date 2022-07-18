@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from "styled-components";
-import bg from '../../assets/image/bannerhome.png'
+import bg from '../../assets/image/Sncx10Dkt8c.jpg'
 import Button from '../../components/button/Button';
 import InputPrimary from '../../components/input/InputPrimary';
 import coin from '../../assets/image/coinbanner.png'
@@ -43,7 +43,7 @@ const Container = styled.div`
   padding: 0 15px;
   display: flex;
   align-items: center;
-  padding-top: 100px;
+  padding-top: 150px;
   .left{
     max-width: 486px;
     margin-right: 156px;

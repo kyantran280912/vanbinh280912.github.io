@@ -1,14 +1,16 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 import styled from "styled-components";
 import Input from "../input/InputSearch";
 import BtnHeader from "./BtnHeader";
 import LogoHeader from "./LogoHeader";
 import Navbar from "./Navbar";
-
 const Header = (props) => {
+  const result = useLocation().pathname.includes('/auth')
   return (
-    <StyledHeader>
-
+    <>
+      {
+        !result && <StyledHeader>
       <div className="left">
         <LogoHeader></LogoHeader>
         <Navbar></Navbar>
@@ -16,6 +18,8 @@ const Header = (props) => {
       </div>
       <BtnHeader themeToggler={props.themeToggler} />
     </StyledHeader>
+      }
+    </>
   );
 };
 const StyledHeader = styled.div`
