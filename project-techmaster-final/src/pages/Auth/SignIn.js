@@ -9,10 +9,9 @@ import TemplateAuth from "./TemplateAuth";
 
 const SignIn = () => {
   const [togglepassword, settogglepassword] = useState(false)
-  const result = useLocation().pathname.includes("/auth");
   return (
     <>
-      {
+      
         <TemplateAuth>
           <BoxSignIn>
             <TitleSection>Đăng nhập</TitleSection>
@@ -44,7 +43,7 @@ const SignIn = () => {
             </div>
           </BoxSignIn>
         </TemplateAuth>
-      }
+      
     </>
   );
 };

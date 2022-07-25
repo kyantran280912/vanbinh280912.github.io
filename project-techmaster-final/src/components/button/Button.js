@@ -1,12 +1,20 @@
 import { Icon } from "@iconify/react";
 import React from "react";
 import styled, { css } from "styled-components";
-
+import PropTypes from "prop-types"
+/**
+ * @requires
+ * @param {string} type Type of button 'button' | 'submit'
+ * @returns 
+ */
 const Button = ({ btnsignin, textbutton, children, type = 'button',onClick = () => {}, ...props }) => {
   const {isLoading} = props
    const child = !!isLoading ? <Icon icon='eos-icons:three-dots-loading' className='icon-loading'></Icon> : children
   return <ButtonPri btnsignin={btnsignin} type={type} {...props}>{textbutton || child}</ButtonPri>;
 };
+Button.propTypes = {
+  type: PropTypes.oneOf(['button', 'submit']).isRequired,
+}
 const ButtonPri = styled.button`
   width: 100%;
   height: 100%;

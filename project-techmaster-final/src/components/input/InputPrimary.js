@@ -1,7 +1,16 @@
 import React from 'react'
 import styled from "styled-components";
 import { useController } from "react-hook-form"
-const InputPrimary = ({ placeholder, type = 'text', name, control, children, ...props }) => {
+import PropTypes from "prop-types";
+
+/**
+ *
+ * @param {*} placeholder(optional) - Placeholder of input
+ * @param {*} name(optional) - name of input
+ * @param {*} control - control from react hook form
+ * @returns Input
+ */
+const InputPrimary = ({ placeholder, type = 'text', name = '', control, children, ...props }) => {
   const { field } = useController({
     control,
     name,

@@ -10,8 +10,7 @@ import Home from "./pages/home/Home";
 import Footer from "./components/footer/Footer";
 import SignIn from "./pages/Auth/SignIn";
 import SignUp from "./pages/Auth/SignUp";
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
 function App() {
 	const [theme, themeToggler] = useDarkMode();
 	const route = [
@@ -36,7 +35,6 @@ function App() {
 			<>
 				<GlobalStyles />
 				<Wrapper>
-							<ToastContainer></ToastContainer>
 					<Router>
 						<Container>
 							<Header themeToggler={themeToggler} />

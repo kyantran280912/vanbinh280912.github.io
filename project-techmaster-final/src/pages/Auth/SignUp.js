@@ -25,50 +25,42 @@ const schema = yup.object(
 const SignUp = () => {
   const navigate = useNavigate()
   const [togglepassword, settogglepassword] = useState(false)
-  const { control,
+  const {
+    control,
     handleSubmit,
     formState: { errors, isValid, isSubmitting },
-    watch,
-    reset,
   } = useForm({
     mode: "onChange",
     resolver: yupResolver(schema)
   })
   const handelSubmit = async (values) => {
     if (!isValid) return;
-    console.log(values);
     const user = await createUserWithEmailAndPassword(auth, values.email, values.password)
     await updateProfile(auth.currentUser, {
       displayName: values.fullname,
     })
+   
+
     const colRef = collection(db, "users");
     await addDoc(colRef,
       {
         fullname: values.fullname,
         email: values.email,
-        password: values.password
-      })
-    toast.success('Create user success')
-    navigate('/auth/signin')
-    // return new Promise((resolve) => {
-    //   setTimeout(() => {
-    //     resolve();
+        password: values.password,
+      });
+    toast.success("Register successfully!!!")
+    navigate('/')
+  };
 
-    //   }, 5000)
-    // })
-
-  }
   useEffect(() => {
-    const arrError = (Object.values(errors));
+    const arrError = Object.values(errors);
     if (arrError.length > 0) {
       toast.error(arrError[0]?.message, {
         pauseOnHover: false,
         delay: 0,
       })
     }
-
   }, [errors])
-  console.log((Object.values(errors)));
   return (
     <TemplateAuth>
       <BoxSignIn >
@@ -79,7 +71,7 @@ const SignUp = () => {
               <InputPrimary placeholder='Họ và tên' name='fullname' control={control} />
             </div>
             <div className="email">
-              <InputPrimary placeholder='Email' name='email' control={control} />
+              <InputPrimary placeholder='Email' type='email' name='email' control={control} />
             </div>
             <div className="password" >
               <InputPrimary placeholder='Mật khẩu' type={togglepassword ? 'text' : 'password'} name='password'
