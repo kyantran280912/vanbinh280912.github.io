@@ -1,8 +1,11 @@
+import { Icon } from "@iconify/react";
 import React from "react";
 import styled, { css } from "styled-components";
 
-const Button = (props) => {
-  return <ButtonPri btnsignin={props.btnsignin}>{props.textbutton || props.children}</ButtonPri>;
+const Button = ({ btnsignin, textbutton, children, type = 'button',onClick = () => {}, ...props }) => {
+  const {isLoading} = props
+   const child = !!isLoading ? <Icon icon='eos-icons:three-dots-loading' className='icon-loading'></Icon> : children
+  return <ButtonPri btnsignin={btnsignin} type={type} {...props}>{textbutton || child}</ButtonPri>;
 };
 const ButtonPri = styled.button`
   width: 100%;
@@ -17,6 +20,12 @@ const ButtonPri = styled.button`
   color: ${({ theme }) => theme.textblack};
   background: ${({ theme }) => theme.pri};
   transition: all 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .icon-loading{
+    font-size: 40px;
+  }
   ${(props) =>
     props.btnsignin &&
     css`
@@ -27,6 +36,10 @@ const ButtonPri = styled.button`
         color: ${({ theme }) => theme.pri};
       }
     `};
+    &:disabled{
+      opacity: .5;
+      pointer-events: none;
+    }
 `;
 
 export default Button;

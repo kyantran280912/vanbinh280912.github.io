@@ -1,18 +1,31 @@
 import React from 'react'
 import styled from "styled-components";
-const InputPrimary = (props) => {
+import { useController } from "react-hook-form"
+const InputPrimary = ({ placeholder, type = 'text', name, control, children, ...props }) => {
+  const { field } = useController({
+    control,
+    name,
+    defaultValue: ""
+  })
   return (
     <InputStyle>
-            <InputPri placeholder={
-                props.placeholder
-            }>
-            </InputPri>
+      <InputPri placeholder={placeholder}
+        type={type}
+        id={name}
+        {...field}
+        {...props}
+      >
+      </InputPri>
+      {
+        children
+      }
     </InputStyle>
   )
 }
 const InputStyle = styled.div`
     display: flex;
     align-items: center;
+    justify-content: center;
     background: ${({ theme }) => theme.bginput};
     border-radius: 5px;
     width: 100%;
@@ -25,13 +38,19 @@ const InputStyle = styled.div`
     :focus-within{
       border: 1px solid ${({ theme }) => theme.pri};
     }
+    .input-icon{
+      margin-right: 10px;
+      font-size: 22px;
+      cursor: pointer;
+      color: ${({ theme }) => theme.text};
+    }
   
 `
 const InputPri = styled.input`
-    background: transparent;
+    background: inherit;
     outline: 0;
     border: none;
-    width: 80%;
+    width: 100%;
     color: ${({ theme }) => theme.text};
     ::placeholder{
         font-size: 14px;

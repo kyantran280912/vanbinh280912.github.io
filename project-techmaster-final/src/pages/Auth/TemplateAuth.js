@@ -27,6 +27,7 @@ const Left = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 `
 const Right = styled.div`
     width: 50%;

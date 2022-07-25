@@ -44,7 +44,6 @@ export const GlobalStyles = createGlobalStyle`
       overflow-wrap: break-word;
     }
     body{
-    transition: all 0.5s linear;
     font-family: 'Inter';
 		font-style: normal;
 		font-weight: 400;

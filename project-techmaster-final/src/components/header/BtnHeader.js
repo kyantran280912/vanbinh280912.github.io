@@ -1,5 +1,6 @@
 import { Icon } from '@iconify/react';
 import React from 'react'
+import { Link } from 'react-router-dom';
 import styled from "styled-components";
 import Button from '../button/Button';
 import SwitchMode from './SwitchMode';
@@ -7,9 +8,11 @@ import SwitchMode from './SwitchMode';
 const BtnHeader = (props) => {
   return (
     <BoxBtn>
-      <div className="button"><Button textbutton='Đăng nhập' btnsignin={true} /></div>
       <div className="button">
-      <Button textbutton='Đăng kí' />
+      <Link to='/auth/signin'>
+      <Button textbutton='Đăng nhập' >
+        
+      </Button></Link>
       </div>
       <QrCode>
         <Icon icon='ant-design:download-outlined'></Icon>
