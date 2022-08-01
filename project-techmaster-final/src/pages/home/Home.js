@@ -1,21 +1,16 @@
 import React from 'react'
 import styled from "styled-components";
-import BannerHome from './BannerHome';
-import FeatureHome from './FeatureHome';
-import ListCoinTop from './ListCoinTop';
-
+import HomeBanner from './HomeBanner';
 
 
 const Home = () => {
   return (
     <Main>
-      <BannerHome></BannerHome>
-      <ListCoinTop/>
-      <FeatureHome/>
+        <HomeBanner/>
     </Main>
   )
 }
 const Main = styled.div`
-
+    height: 200vh;
 `
 export default Home

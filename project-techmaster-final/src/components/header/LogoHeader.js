@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from "styled-components";
-import Logo from '../../assets/image/logocircle.png'
+import Logo from '../../assets/image/logo.png'
 
 
 const LogoHeader = () => {
@@ -11,7 +11,7 @@ const LogoHeader = () => {
   )
 }
 const BoxLogo = styled.div`
-    max-width: 50px;
+    max-width: 180px;
     
 `
 

@@ -2,7 +2,7 @@ import { Icon } from "@iconify/react";
 import React from "react";
 import { useLocation } from "react-router-dom";
 import styled from "styled-components";
-import Logo from "../../assets/image/logocircle.png";
+import Logo from "../../assets/image/logo.png";
 
 const Footer = () => {
     const data = [
@@ -112,7 +112,7 @@ const StyleListFooter = styled.div`
     grid-template-columns: repeat(5, 1fr);
     margin: 0 auto;
   .logo {
-    width: 60px;
+    width: 100px;
   }
   .list-social{
     display: grid;
@@ -129,8 +129,9 @@ const StyleListFooter = styled.div`
   }
 `;
 const StyleFooter = styled.div`
-  background: ${({ theme }) => theme.bg2};
+  background: ${({ theme }) => theme.bg};
   margin-top: 100px;
+  
 
   .container {
     max-width: 1440px;

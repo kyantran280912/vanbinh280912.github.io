@@ -8,8 +8,8 @@ import styled from "styled-components";
 import Header from "./components/header/Header";
 import Home from "./pages/home/Home";
 import Footer from "./components/footer/Footer";
-import SignIn from "./pages/Auth/SignIn";
-import SignUp from "./pages/Auth/SignUp";
+import CarouselCoin from "./components/CarouselCoin";
+import CoinPage from "./pages/coin/CoinPage";
 
 function App() {
 	const [theme, themeToggler] = useDarkMode();
@@ -20,15 +20,11 @@ function App() {
 			  main: <Home />,
 		},
 		{
-			path: "/auth/signin",
+			path: "/coins/:id",
 			exact: true,
-			  main: <SignIn />,
+			  main: <CoinPage />,
 		},
-		{
-			path: "/auth/signup",
-			exact: true,
-			  main: <SignUp />,
-		},
+		
 	];
 	return (
 		<ThemeProvider theme={theme === "light" ? darkTheme : lightTheme} themeToggler={themeToggler}>
@@ -37,6 +33,7 @@ function App() {
 				<Wrapper>
 					<Router>
 						<Container>
+							<CarouselCoin/>
 							<Header themeToggler={themeToggler} />
 							<Routes>
 								{route.map((route, index) => {

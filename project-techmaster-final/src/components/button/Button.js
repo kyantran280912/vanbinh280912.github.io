@@ -25,7 +25,7 @@ const ButtonPri = styled.button`
   font-weight: 500;
   text-align: center;
   cursor: pointer;
-  color: ${({ theme }) => theme.textblack};
+  color: white;
   background: ${({ theme }) => theme.pri};
   transition: all 0.2s;
   display: flex;

@@ -113,7 +113,7 @@ const DropdownApp = () => {
 }
 const BoxDropdown = styled.div`
     padding: 28px 24px;
-    background: ${({ theme }) => theme.bg2};
+    background: ${({ theme }) => theme.bg1};
     height: 442px;
     width: 800px;
     z-index: 100;
@@ -136,7 +136,6 @@ const BoxDropdown = styled.div`
         svg{
           color: ${({ theme }) => theme.pri};
           font-size: 20px;
-          
         }
         .text-title{
           font-size: 16px;
@@ -144,7 +143,6 @@ const BoxDropdown = styled.div`
           line-height: 24px;
           color: ${({ theme }) => theme.text};
           transition: .2s ease;
-          
         }
         .text-note{ 
           font-size:  12px;

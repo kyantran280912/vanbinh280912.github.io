@@ -14,32 +14,23 @@ const Navbar = () => {
           <DropdownApp/>
           </div>
         </li>
-        <li className="menu-items">
-          Mua Crypto
-          <Icon icon="ant-design:caret-down-filled" className="dropdown-icon"></Icon>
+        <li className="menu-items active">
+          Home
         </li>
         <li className="menu-items">
-          Thị trường
-          <Icon icon="ant-design:caret-down-filled" className="dropdown-icon"></Icon>
+          Market
         </li>
         <li className="menu-items">
-          Giao dịch
-          <Icon icon="ant-design:caret-down-filled" className="dropdown-icon"></Icon>
+          Converter
         </li>
         <li className="menu-items">
-         Phái sinh
-          <Icon icon="ant-design:caret-down-filled" className="dropdown-icon"></Icon>
+         Buy Crypto
         </li>
         <li className="menu-items">
-         Earn
-          <Icon icon="ant-design:caret-down-filled" className="dropdown-icon"></Icon>
+         About
         </li>
         <li className="menu-items">
-         NFT
-        </li>
-        <li className="menu-items">
-         WSOT
-         <img src="https://bin.bnbstatic.com/image/julia/new-hompage/web-background-image.png" alt="" />
+         Contact
         </li>
       </ul>
     </StyledNav>
@@ -55,10 +46,12 @@ const StyledNav = styled.div`
       display: flex;
       align-items: center;
       padding: 0 12px;
-      font-size: 14px;
-      line-height: 64px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 36px;
       gap: 0 4px;
       position: relative;
+      transition: .3s ease;
       .dropdown-icon {
         color: ${({ theme }) => theme.text};
         font-size: 12px;
@@ -72,9 +65,9 @@ const StyledNav = styled.div`
        
       }
       :hover{
-        color: ${({ theme }) => theme.pri};
+        color: ${({ theme }) => theme.textpri};
         .dropdown-icon{
-          color: ${({ theme }) => theme.pri};
+          color: ${({ theme }) => theme.textpri};
           transform: rotate(180deg);
         }
         .box-dropdown{
@@ -90,7 +83,8 @@ const StyledNav = styled.div`
         z-index: 9999;
       }
     }
-    
+    .menu-items.active{
+    }
   }
 `;
 

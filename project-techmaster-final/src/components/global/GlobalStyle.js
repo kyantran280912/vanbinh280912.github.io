@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
+  @import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
     *,
     *::before,
     *::after {
@@ -44,7 +45,7 @@ export const GlobalStyles = createGlobalStyle`
       overflow-wrap: break-word;
     }
     body{
-    font-family: 'Inter';
+    font-family: 'Poppins', sans-serif;
 		font-style: normal;
 		font-weight: 400;
     background: ${({ theme }) => theme.bg};
@@ -55,6 +56,7 @@ export const GlobalStyles = createGlobalStyle`
     }
     a{
       text-decoration: none;
+      /* color: white; */
     }
     button{
       cursor: pointer;
@@ -83,7 +85,7 @@ export const GlobalStyles = createGlobalStyle`
   background-color: 121317;
 }
 a{
-  color: ${({ theme }) => theme.pri};
+  color: ${({ theme }) => theme.text};
 }
 :root{
   --text-pri: #ffffff;
